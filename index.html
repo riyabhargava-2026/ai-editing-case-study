@@ -105,6 +105,8 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:var(--s4);display:flex
   .facts,.steps,.ba,.mini{grid-template-columns:1fr}
   .frame{height:auto;max-height:520px}
 }
+.step span:last-child{font-size:15px}
+.oneline{font-size:16px;color:#CFCAC0;margin-top:var(--s2)}
 </style>
 </head>
 <body>
@@ -121,12 +123,11 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:var(--s4);display:flex
   </div>
 </header>
 
-<!-- ================= PROJECT 1 ================= -->
 <section class="wrap proj">
   <div class="proj-head">
     <span class="num">Project 01</span>
     <h2>A 25-minute episode, turned into a 2-minute explainer</h2>
-    <p>Andrew Huberman explains his morning sunlight routine. Claude found the best two minutes and added clear, simple graphics so viewers can follow the science.</p>
+    <p>Andrew Huberman explains his morning sunlight routine. Claude found the strongest two minutes and added clear, simple graphics so viewers can follow the science.</p>
   </div>
   <div class="video"><video src="media/h.mp4" poster="media/h_edit.jpg" controls playsinline preload="metadata"></video></div>
   <p class="cap">Final video, 2:03. Footage: Figuring Out with Raj Shamani, used for a portfolio exercise.</p>
@@ -139,12 +140,24 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:var(--s4);display:flex
   <div class="sub">
     <h3>My brief</h3>
     <p class="brief">"Select a strong 2-minute segment from the full episode and edit it into a standalone explainer with motion graphics."</p>
-    <p class="muted" style="margin-top:12px;max-width:640px">A one-line brief. It worked because the visual style was already set. Claude reused the clean "tech" look from a reel I had made with it earlier, so I didn't need to describe it again.</p>
+    <p class="muted">A one-line brief. It worked because the visual direction was already in place: Claude carried over the clean, tech-inspired style from a reel I had made with it earlier, so the look didn't need to be described again.</p>
+    <details>
+      <summary>Read my prompt</summary>
+<pre>Edit this 25-minute podcast episode into a 2-minute standalone explainer for YouTube.
+
+1. SEGMENT – Transcribe the full episode and pick the strongest continuous 2-minute section. It should make sense on its own, with a clear start and a complete idea. Don't cut mid-sentence or change the meaning.
+2. STORY – Open on a line that sets up the topic straight away. End on a clear takeaway, not a trailing thought.
+3. VISUAL STYLE – Reuse the clean, tech-inspired look from my earlier reel: minimal layouts, one accent colour, consistent type and smooth eased motion. No emojis or loud effects.
+4. MOTION GRAPHICS – Add info cards for key ideas, simple charts or diagrams for any science, and checklists for steps the viewer can follow. Place every graphic in empty areas of the frame so it never covers a face.
+5. CAPTIONS AND TITLES – Word-by-word captions with keywords highlighted, plus a name tag introducing the speaker.
+6. QUALITY CHECK – Review frames across the video for placement, timing and readability before sending.
+7. OUTPUT – Final MP4 in 16:9 landscape and a short note on why you chose this segment.</pre>
+    </details>
   </div>
 
   <div class="sub">
     <h3>How it worked</h3>
-    <div class="steps">
+    <div class="steps row">
       <div class="step"><span class="who">Me</span><b>1. Gave the brief</b><span>Asked for a 2-minute cut with motion graphics.</span></div>
       <div class="step"><span class="who">Claude</span><b>2. Picked the moment</b><span>Transcribed all 25 minutes and chose the strongest 2: the morning sunlight routine.</span></div>
       <div class="step"><span class="who">Claude</span><b>3. Designed the graphics</b><span>Info cards, a cortisol chart, checklists, captions and a name tag, placed in empty areas so they never cover a face.</span></div>
@@ -155,66 +168,49 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:var(--s4);display:flex
   <div class="sub">
     <h3>Before and after</h3>
     <div class="ba wide">
-      <div>
-        <p class="label">Raw footage</p>
-        <div class="frame"><img src="media/h_raw.jpg" alt="Raw footage: Andrew Huberman talking at the microphone, no text or graphics"></div>
-        <ul><li>Just the conversation</li><li>No captions or context</li></ul>
-      </div>
-      <div class="after">
-        <p class="label" style="color:var(--accent)">Final edit, same moment</p>
-        <div class="frame"><img src="media/h_edit.jpg" alt="Final edit: a white checklist card for morning sunlight, a name tag for Dr. Andrew Huberman and captions with a highlighted word"></div>
-        <ul><li>Checklist card explains the step</li><li>Name tag and live captions</li></ul>
-      </div>
+      <div><p class="label">Raw footage</p><div class="frame"><img src="media/h_raw.jpg" alt="Raw footage: Andrew Huberman talking, no graphics"></div><ul><li>Just the conversation</li><li>No captions or context</li></ul></div>
+      <div class="after"><p class="label" style="color:var(--accent)">Final edit, same moment</p><div class="frame"><img src="media/h_edit.jpg" alt="Edited: checklist card, name tag and captions over the same moment"></div><ul><li>Checklist card explains the step</li><li>Name tag and live captions</li></ul></div>
     </div>
   </div>
 </section>
 
-<!-- ================= PROJECT 2 ================= -->
 <section class="wrap proj">
   <div class="proj-head">
     <span class="num">Project 02</span>
     <h2>A raw podcast clip, redesigned after my review</h2>
-    <p>Alex Hormozi answers what advice he would leave the world. The first version followed my brief but looked cheap, so I directed a minimal redesign.</p>
+    <p>Alex Hormozi answers what advice he would leave the world. The first version followed my brief but felt loud and cheap. I directed a minimal redesign, then refined the motion graphics and colour over a few rounds.</p>
   </div>
-  <div class="video"><video src="media/v2.mp4" poster="media/v2_poster.jpg" controls playsinline preload="metadata"></video></div>
+  <div class="video"><video src="media/v3.mp4" poster="media/v3_poster.jpg" controls playsinline preload="metadata"></video></div>
   <p class="cap">Final video, 0:30. Footage: Alex Hormozi podcast, used for a portfolio exercise.</p>
   <div class="mini">
     <div><p class="label">Raw</p><p>62-second clip</p></div>
     <div><p class="label">Final</p><p>30 seconds, silences removed</p></div>
-    <div><p class="label">Revisions</p><p>1 redesign after my feedback</p></div>
+    <div><p class="label">Revisions</p><p>A redesign, then a few refinement rounds</p></div>
   </div>
 
   <div class="sub">
     <h3>How it worked</h3>
-    <div class="steps">
+    <div class="steps row">
       <div class="step"><span class="who">Me</span><b>1. Wrote the brief</b><span>A detailed prompt covering the hook, pacing, zooms, captions, graphics and the files I needed back.</span></div>
       <div class="step"><span class="who">Claude</span><b>2. Made the first cut</b><span>Transcribed the clip, removed the silences, added captions and graphics, then checked its own frames.</span></div>
-      <div class="step"><span class="who">Me</span><b>3. Reviewed it</b><span>It followed the brief, but the style felt loud and cheap. I gave clear design feedback.</span></div>
-      <div class="step"><span class="who">Claude</span><b>4. Redesigned it</b><span>A minimal, landscape version with lighter captions, fewer zooms and no emojis.</span></div>
+      <div class="step"><span class="who">Me</span><b>3. Reviewed it</b><span>It met the brief, but the style felt loud and cheap. I gave clear design feedback.</span></div>
+      <div class="step"><span class="who">Claude</span><b>4. Redesigned and refined it</b><span>Landscape, fewer zooms and no emojis, then UI cards tied to the story and a warm champagne accent that matches the set.</span></div>
     </div>
   </div>
 
   <div class="sub">
     <h3>Before and after</h3>
     <div class="ba">
-      <div>
-        <p class="label">First version</p>
-        <div class="frame"><img src="media/v1_26_0.jpg" alt="First version: vertical frame with bold uppercase captions and emoji callout boxes over the speaker"></div>
-        <ul><li>Vertical, Shorts-style</li><li>Heavy captions, emoji boxes</li><li>8 zooms in 30 seconds</li></ul>
-      </div>
-      <div class="after">
-        <p class="label" style="color:var(--accent)">Final version</p>
-        <div class="frame"><img src="media/v2_26_0.jpg" alt="Final version: landscape frame with a small numbered list and clean captions"></div>
-        <ul><li>Landscape, made for YouTube</li><li>Clean captions, one accent colour</li><li>3 gentle zooms</li></ul>
-      </div>
+      <div><p class="label">First version</p><div class="frame"><img src="media/v1_26_0.jpg" alt="Version 1: vertical, bold captions and emoji callouts"></div><ul><li>Vertical, Shorts-style</li><li>Heavy captions, emoji boxes</li><li>8 zooms in 30 seconds</li></ul></div>
+      <div class="after"><p class="label" style="color:var(--accent)">Final version</p><div class="frame"><img src="media/v3_26_0.jpg" alt="Final: landscape frame with a white advice checklist card and a champagne caption highlight"></div><ul><li>Landscape, made for YouTube</li><li>UI cards that follow the story</li><li>Champagne accent, 3 gentle zooms</li></ul></div>
     </div>
   </div>
 
   <div class="sub narrow">
-    <h3>My feedback</h3>
-    <p class="feedback">The first version met every spec but missed the mood. It needed to be minimal and calm, so the conversation could carry the video.</p>
+    <h3>My review</h3>
+    <p class="feedback">The first version met every technical spec but missed the intended mood. The edit needed to feel minimal and calm, letting the conversation lead rather than the effects.</p>
     <details>
-      <summary>Read my original prompt (shortened)</summary>
+      <summary>Read my prompt</summary>
 <pre>Edit this entire raw podcast clip (1–2 min) into an engaging video for youtube. Use the whole clip; don't pick out one part of it.
 
 1. HOOK – Find the strongest 3-second line and put it at the start as a teaser. Add a big hook title (max 6 words).
@@ -227,14 +223,13 @@ footer .wrap{border-top:1px solid var(--rule);padding-top:var(--s4);display:flex
   </div>
 </section>
 
-<!-- ================= TAKEAWAYS ================= -->
 <section class="wrap proj narrow">
   <div class="proj-head"><span class="num">Takeaways</span><h2>What I learned</h2></div>
   <ul class="list">
-    <li><strong>A short brief can work</strong><span>When the style is already set, one clear line is enough (Project 01).</span></li>
+    <li><strong>A short brief can work</strong><span>When the visual style is already established, one clear line is enough (Project 01).</span></li>
     <li><strong>Detail isn't taste</strong><span>A detailed brief got the mechanics right, but only my review fixed the look (Project 02).</span></li>
     <li><strong>Feedback must be specific</strong><span>"Fewer zooms, no emojis, landscape" is easy to act on. "Make it better" is not.</span></li>
-    <li><strong>AI does the execution</strong><span>Transcribing, cutting and animating took minutes. Direction and judgement stayed with me.</span></li>
+    <li><strong>AI executes, I direct</strong><span>Transcribing, cutting and animating took minutes. Direction and judgement stayed with me.</span></li>
   </ul>
 </section>
 
