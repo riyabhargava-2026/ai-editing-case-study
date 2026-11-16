@@ -39,8 +39,8 @@ h3{font-size:22px;line-height:1.2;letter-spacing:-.01em}
 .top b{font-weight:600}
 
 /* hero */
-.hero{padding:var(--s8) 0 var(--s7)}
-.hero .label{margin-bottom:var(--s4)}
+.hero{padding-top:var(--s8);padding-bottom:var(--s7)}
+.hero > .label{margin-bottom:var(--s4)}
 .hero h1{max-width:12ch}
 .hero .intro{margin-top:var(--s5);font-size:20px;line-height:1.5;color:var(--soft);max-width:560px}
 .facts{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s4);margin-top:var(--s6)}
@@ -144,10 +144,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:var(--s3);flex-wrap:
 @media (max-width:520px){
   body{font-size:16px}
   .wrap{padding:0 20px}
-  .hero{padding:var(--s7) 0 var(--s6)}
+  .hero{padding-top:var(--s6);padding-bottom:var(--s6)}
+  .hero .intro{font-size:17px;margin-top:var(--s4)}
+  .facts{grid-template-columns:1fr 1fr;gap:var(--s3) var(--s4);margin-top:var(--s5)}
+  .facts p:last-child{font-size:15px}
+  .big{font-size:44px}
   .proj{padding-top:var(--s7)}
   .sub{padding-top:var(--s6)}
-  .facts,.meta,.ba,.duo,.two{grid-template-columns:1fr}
+  .meta,.ba,.duo,.two{grid-template-columns:1fr}
   .duo .media{max-width:280px;margin:0 auto}
   .frame{height:auto;max-height:480px}
   .strip figure{flex-basis:72%}
