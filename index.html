@@ -105,6 +105,26 @@ pre{margin:0;padding:0 var(--s4) var(--s4);font-family:var(--mono);font-size:12.
 .strip figcaption span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
 .strip:focus-visible{outline:2px solid var(--ink);outline-offset:4px;border-radius:12px}
 
+.duo{display:grid;grid-template-columns:minmax(0,320px) 1fr;gap:var(--s6);align-items:center}
+.duo .media{max-width:320px}
+.duo h3{font-size:26px;margin-bottom:var(--s2)}
+.duo p.d{color:var(--soft)}
+.duo .label{display:block;margin-bottom:var(--s2)}
+.note{margin-top:var(--s4);background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:10px;padding:var(--s3) var(--s4);font-size:15px;line-height:1.5;color:var(--soft);max-width:520px}
+.note b{color:var(--ink)}
+.vblock{padding-top:var(--s7)}
+.vblock + .vblock{margin-top:var(--s5);border-top:1px solid var(--rule)}
+.vblock h3{font-size:28px;margin-bottom:var(--s3)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:var(--s5);margin-top:var(--s5);align-items:start}
+.two .label{display:block;margin-bottom:var(--s2)}
+.bullets{padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:15.5px;line-height:1.5;color:var(--soft)}
+.bullets b{color:var(--ink);font-weight:600}
+.scenes{list-style:none;padding:0;counter-reset:sc;display:flex;flex-direction:column}
+.scenes li{counter-increment:sc;display:grid;grid-template-columns:36px 1fr;gap:var(--s2);padding:10px 0;border-top:1px solid var(--rule);font-size:15px;line-height:1.45;color:var(--soft)}
+.scenes li::before{content:counter(sc,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:2px}
+.scenes b{color:var(--ink);font-weight:600}
+.brief.small{font-size:15.5px}
+.brief .label{display:block;margin-bottom:var(--s2)}
 .list{list-style:none;padding:0;border-top:1px solid var(--ink)}
 .list li{display:grid;grid-template-columns:240px 1fr;gap:var(--s4);padding:var(--s4) 0;border-bottom:1px solid var(--rule);line-height:1.5}
 .list strong{font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:-.01em}
@@ -127,7 +147,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:var(--s3);flex-wrap:
   .hero{padding:var(--s7) 0 var(--s6)}
   .proj{padding-top:var(--s7)}
   .sub{padding-top:var(--s6)}
-  .facts,.meta,.ba{grid-template-columns:1fr}
+  .facts,.meta,.ba,.duo,.two{grid-template-columns:1fr}
+  .duo .media{max-width:280px;margin:0 auto}
   .frame{height:auto;max-height:480px}
   .strip figure{flex-basis:72%}
 }
@@ -142,12 +163,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:var(--s3);flex-wrap:
 
 <header class="wrap hero">
   <p class="label"><span class="dot"></span>Case study · Designing with AI</p>
-  <h1>Three projects, made with AI.</h1>
-  <p class="intro">Two podcast edits and two Instagram carousels. AI did the heavy lifting. I set the concept, wrote the briefs and made every design call.</p>
+  <h1>Four projects, made with AI.</h1>
+  <p class="intro">Podcast edits, Instagram carousels and animated explainers. AI did the heavy lifting. I set the concepts, wrote the briefs and made every design call.</p>
   <div class="facts">
     <div><p class="label">My role</p><p>Concept, briefs, art direction</p></div>
-    <div><p class="label">AI tools</p><p>Claude, ChatGPT</p></div>
-    <div><p class="label">Work</p><p>2 videos, 2 carousels</p></div>
+    <div><p class="label">AI tools</p><p>Claude, ChatGPT, ElevenLabs</p></div>
+    <div><p class="label">Work</p><p>4 videos, 2 carousels</p></div>
     <div><p class="label">Skills</p><p>Prompting, motion, social design</p></div>
   </div>
 </header>
@@ -156,7 +177,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:var(--s3);flex-wrap:
   <ul class="index">
     <li><a href="#p1"><span class="n">01</span><span class="t">Podcast to a 2-minute explainer</span><span class="k">Video · Claude</span></a></li>
     <li><a href="#p2"><span class="n">02</span><span class="t">Raw clip, redesigned after review</span><span class="k">Video · Claude</span></a></li>
-    <li><a href="#p3"><span class="n">03</span><span class="t">Instagram carousels: Bombae and LUMO</span><span class="k">Social · Claude, ChatGPT</span></a></li>
+    <li><a href="#p3"><span class="n">03</span><span class="t">Animated explainers for Instantpay</span><span class="k">Motion · Claude, ElevenLabs</span></a></li>
+    <li><a href="#p4"><span class="n">04</span><span class="t">Instagram carousels: Bombae and LUMO</span><span class="k">Social · Claude, ChatGPT</span></a></li>
   </ul>
 </nav>
 
@@ -273,6 +295,234 @@ footer .wrap{display:flex;justify-content:space-between;gap:var(--s3);flex-wrap:
   <div class="phead">
     <span class="big">03</span>
     <div>
+      <p class="label">Motion · Animated explainers for Instantpay</p>
+      <h2>Two explainers, animated entirely in code</h2>
+      <p class="lede">I wrote the scripts and detailed prompts, picked the styles and made the voiceovers in ElevenLabs. Claude storyboarded, animated and rendered.</p>
+    </div>
+  </div>
+  <div class="meta">
+    <div><p class="label">Formats</p><p>9:16 reel, 16:9 walkthrough</p></div>
+    <div><p class="label">Length</p><p>0:46 and 0:39</p></div>
+    <div><p class="label">AI tools</p><p>Claude, ElevenLabs</p></div>
+  </div>
+
+  <div class="sub">
+    <span class="label">How it worked</span>
+    <div class="steps">
+      <div class="step"><span class="who">Me</span><b>Prompt and voice</b><span>Script, style, rules and an ElevenLabs voiceover.</span></div>
+      <div class="step"><span class="who ai">Claude</span><b>Storyboard</b><span>10 beats of stills, timed to my voice.</span></div>
+      <div class="step"><span class="who">Me</span><b>Approve</b><span>Signed off the storyboard before any animation.</span></div>
+      <div class="step"><span class="who ai">Claude</span><b>Animate and render</b><span>Motion, sound effects and the final mix.</span></div>
+    </div>
+  </div>
+
+  <div class="vblock">
+    <div class="duo">
+      <div class="media"><video src="media/dl.mp4" poster="media/dl_poster.jpg" controls playsinline preload="metadata"></video></div>
+      <div>
+        <span class="label">Instagram reel · 9:16 · 0:46 · "Clean Tech" style</span>
+        <h3>DigiLocker is not a document wallet</h3>
+        <ul class="bullets">
+          <li><b>Fact-checked:</b> "DigiLocker is now legally mandated" wasn't accurate, so the line was cut.</li>
+          <li><b>Tightened:</b> a repeated voiceover take was removed, taking it from 55 to 46 seconds.</li>
+          <li><b>Built from my script:</b> hook, stat drop, flow diagram, reframe and CTA.</li>
+        </ul>
+        <details>
+          <summary>Read my prompt</summary>
+<pre>I want an animated video in the &quot;Clean Tech&quot; style (Kinetic Type) from the Nafay 3D Style Library. Below is a complete, working reference animation in this style: its core helpers (CM), a synthesized sound kit (SFX), the style&#x27;s scenes, its sound score and the player page. Treat that file as the ground truth for how this style looks, moves and sounds, and rebuild it around my content.
+
+MY CONTENT
+[HOOK — 0:00 to 0:05]
+ Screen: Black. Bold white text types out fast.
+ Text overlay: &quot;You think DigiLocker is just for storing documents.&quot;
+ Voiceover (calm, slightly dramatic): &quot;You think DigiLocker is just a document wallet.&quot;
+ Beat. Text flips.
+ Text overlay: &quot;It&#x27;s not.&quot;
+[STAT DROP — 0:06 to 0:12]
+ Screen: Numbers are animated one by one.
+ 540 million users.
+ 9.8 billion documents issued.
+ 2,131 issuers. 2,611 requesters.
+ Voiceover: &quot;This is India&#x27;s largest document verification rail. And most people have no idea what it actually does.&quot;
+[EXPLAINER — 0:13 to 0:35]
+ Screen: Flow diagram animating — three nodes: Citizen → DigiLocker → Bank/Fintech
+ Voiceover: &quot;When you share via DigiLocker, your bank fetches the document directly from the government issuer, digitally signed and legally valid.&quot;
+ Text overlay appears mid-flow: &quot;Not a copy. The original. Every time.&quot;
+ New graphic icons appear: UIDAI. CBSE. Transport Dept. Income Tax. SEBI.
+ Voiceover: &quot;That&#x27;s 2,131 issuers, from Aadhaar to your degree certificate to your driving licence — all connected.&quot;
+[REFRAME — 0:36 to 0:45]
+ Screen: Split — left shows &quot;Document Wallet&quot; crossed out, right shows &quot;Verification Infrastructure&quot; lit up.
+ Voiceover: &quot;DigiLocker isn&#x27;t where you store documents. It&#x27;s where you verified them. KYC. Lending. SEBI compliance. Even child data consent under the new DPDP Act — DigiLocker is now legally mandated.&quot;
+ Text overlay: &quot;This is India Stack. And it&#x27;s just getting started.&quot;
+[CTA — 0:46 to 0:52]
+ Screen: Instantpay logo fades in. Clean.
+ Text overlay: &quot;Episode 2 coming next — What happens inside a DigiLocker API call?&quot;
+ Voiceover (soft): &quot;Follow for the full series. We&#x27;re breaking down India&#x27;s verification infrastructure, one layer at a time.&quot;
+ Instantpay branding holds for 3 seconds.
+
+VOICEOVER TIMING
+[No timing pasted yet. Before building, ask me for a word-level SRT or word timestamps of my voiceover. If I only have the audio file, offer to transcribe it into word timings.]
+
+How to use the timing:
+- Turn it into a list of words with start and end times in seconds. If the timing is per line only, spread each line&#x27;s words across its span in proportion to their length.
+- Set the duration to the last word&#x27;s end plus about 1.2 seconds.
+- Build the timeline (TL) from these times. Each word rises at the start of its spoken word, within 0.03 s, and the blue pill lands on the stressed word. Show 2 to 6 key words per sentence, not a full transcript.
+- Cut between scenes only at idea boundaries (a new step, a new claim, a reveal), never mid-word, and finish each cut just before the next idea&#x27;s first spoken word.
+- Put the emphasis moves on stressed words. A counter lands at the exact moment its number is spoken.
+- Keep the player&#x27;s &quot;Load voiceover&quot; button working so I can drop in my audio and hear it in sync.
+
+STORYBOARD FIRST
+Before building, show me a storyboard and wait for my OK:
+- One HTML page (an artifact if you can) with a grid of 6 to 10 panels, one per beat. Draw each panel on a canvas with the reference&#x27;s own helpers, scene drawing and finishing pass, so the stills already look like the finished piece. No animation or sound yet.
+- Under each panel: the beat number, its start and end time, the exact on-screen words, the camera move or emphasis, how it gets there from the previous beat (the same scene continuing, or a cut and which kind), and its key sounds.
+- Below the grid, list any facts or numbers you had to assume.
+When I approve it (or after my changes), build the full animation and reuse the storyboard&#x27;s drawing code.
+
+WHAT TO BUILD
+One self-contained HTML file (an artifact if you can), built on the reference file below:
+- Keep the page, the player (play/pause, scrub, time, sound toggle, loop, Load voiceover) and the CM and SFX blocks unchanged.
+- Replace the demo&#x27;s story: TL, CUTS, BUMPS, the counter curve (stepCount), LOOP and ARCS, promptCard(), node(), the scene functions, SCENES and scoreSound(). Keep and reuse the style&#x27;s helpers (the ui-kit helpers (rr, track, rise, riseLine, pillBehind, typed, softCard, checkMark, composite, padBed), background(), cam() and the vignette in explainer()).
+- Aim for 15 to 40 seconds unless my content needs more, and set the duration in TL.D.
+- Keep window.seek(t), window.DURATION, window.scoreSound and window.SFX exposed, so the video can be rendered frame by frame.
+- Load the style&#x27;s fonts before the first draw, as the reference does: Inter Tight (500 to 800), JetBrains Mono (500 and 700).
+
+THE STYLE
+- Surface: cool off-white (#f5f6f8) with a slowly drifting dot grid, a faint blue glow top right and a faint green glow bottom left, and a light vignette. Keep background() and the vignette on every frame.
+- Type: Inter Tight 800 for statements, centered or left aligned, never all caps. Inter Tight 500 to 700 for card text. JetBrains Mono in caps with letter spacing for small labels (THE SHIFT, TASKS, STEPS TAKEN). Ink #0d0f14, muted grey for secondary text, electric blue #2f5bff as the only accent, green #18b46b only for done and checked.
+- How things appear: each word rises from behind a mask with an expo ease (rise, riseLine). Cards slide up and fade in, nodes pop in with a small overshoot, text in input cards is typed with a blinking caret.
+- Emphasis: a blue pill grows behind the one key word and the word turns white (pillBehind). Small blue glows on whatever is active. A green check pops in for anything finished.
+- Diagrams: build ideas from small UI pieces drawn in code: white rounded cards (softCard), mono labels, progress bars, a dashed path with a travelling dot, a counter. Use invented, generic names for any companies or products.
+- Camera: a gentle push-in over each scene and a small bump when a pill lands (cam with BUMPS).
+- Scene changes: clean horizontal pushes for a new idea and a zoom-through into a detail (composite with CUTS). No glitches or flashes.
+- Pace: the hook lands in under 2 seconds, one new element every 0.3 to 1 second, and the takeaway holds about 1.5 seconds.
+
+RULES THAT KEEP IT IN STYLE
+- Change the story, the words and the props; do not change the medium. Draw every subject accurately for my topic and double-check any facts and numbers you show.
+- Every frame is a pure function of t. Use CM.rng(seed) and CM.noise1(seed) for all randomness, never Math.random. Caching static layers is fine.
+- It will be watched on phones: at 1280x720 keep statements at 78 px or more, card text at 26 px or more, mono labels at 18 px or more, and key numbers at 120 px or more. Fill the frame.
+- Keep each frame fast, well under 50 ms.
+- Give my topic its own demo content; do not reuse the reference&#x27;s story (&quot;How AI agents get work done&quot;) unless my content asks for it.
+
+SOUND
+- Bed: a soft synth pad (padBed) with light hats and a gentle kick under the body, dropping out for the hook and the ending.
+- Map events to the kit: rising words get a tiny glassy tick (rise1); blue pills get a clean swipe with a bell note; cards and nodes get &quot;pop&quot;; typing gets &quot;keys&quot; and sending gets &quot;send&quot;; scene pushes get &quot;whoosh&quot;; a zoom-through gets a short &quot;riser&quot; then a whoosh; finished tasks and checks get a two-note chime; counters &quot;tick&quot; only when the shown number changes.
+- Voiceover mix: the player calls SFX.live with { voiceover: true } once narration is loaded, which keeps the pad low and plays anything marked soft at about 55%. Mark word ticks, pops and row ticks soft: true, keep swipes for the 2 or 3 key pills, and never put a riser over a spoken sentence.
+- Sync is everything: the sound score reads the same TL times as the picture.
+
+IF YOU CAN RUN CODE
+Render an MP4: open the file in headless Chrome, call window.seek(i / 30) for every frame, capture the canvas and pipe the frames into ffmpeg. Render the effects with SFX.render(window.scoreSound, window.DURATION, 48000, { voiceover: false }), which returns interleaved stereo floats, and mux them in. With a voiceover, render the effects with { voiceover: true } and mix them under my audio file.
+
+STYLE CARD
+Name: Clean Tech
+Family: Kinetic Type
+Look: A calm, bright product-explainer look: cool off-white with a drifting dot grid, crisp Inter Tight words that rise into place, white UI cards with soft shadows, one electric blue accent, mono labels and a green check for anything finished.
+How it explains: Short statements rise word by word and the key word gets a blue pill. Ideas become small working diagrams: a prompt card that types and sends, nodes that pop in, a dot that travels a loop, task rows that tick off, a counter that climbs, a document that fills in. Clean push and zoom-through cuts move between ideas.
+
++ the style's full reference animation file (code), attached with the prompt.</pre>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <div class="vblock">
+    <span class="label">Software walkthrough · 16:9 · 0:39 · "Software Walkthrough" style</span>
+    <h3>Instantpay: four solutions, one platform</h3>
+    <div class="media"><video src="media/ip.mp4" poster="media/ip_poster.jpg" controls playsinline preload="metadata"></video></div>
+    <p class="cap">The dashboard is demo UI. Names and amounts are sample content.</p>
+    <div class="two">
+      <ul class="bullets">
+        <li><b>Story into steps:</b> my brand script became 4 steps: Payments, Verification, Banking, Security.</li>
+        <li><b>No copied UI:</b> a made-up dashboard instead of Instantpay's real screens.</li>
+        <li><b>On the beat:</b> every click and counter lands on my voiceover.</li>
+      </ul>
+      <details style="margin-top:0">
+        <summary>Read my prompt</summary>
+<pre>I want an animated video in the &quot;Software Walkthrough&quot; style (Screen and UI) from the Nafay 3D Style Library. Below is a complete, working reference animation in this style: its core helpers (CM), a synthesized sound kit (SFX), the style&#x27;s scenes, its sound score and the player page. Treat that file as the ground truth for how this style looks, moves and sounds, and rebuild it around my content.
+
+MY CONTENT
+In a world that never stops moving, can your business afford to slow down?
+
+Fragmented systems, delayed payments, complex verification, and disconnected financial operations.
+
+It&#x27;s time to bring everything together.
+
+One intelligent fintech ecosystem, built to simplify the way businesses move money.
+
+From seamless payments and instant verification to smarter banking and secure financial infrastructure, every solution works together.
+
+Less complexity. More control. And the freedom to scale without limits.
+
+**InstantPay. Powering the future of financial transactions.**
+
+VOICEOVER TIMING
+[No timing pasted yet. Before building, ask me for a word-level SRT or word timestamps of my voiceover. If I only have the audio file, offer to transcribe it into word timings.]
+
+How to use the timing:
+- Turn it into a list of words with start and end times in seconds. If the timing is per line only, spread each line&#x27;s words across its span in proportion to their length.
+- Set the duration to the last word&#x27;s end plus about 1.2 seconds.
+- Build the timeline (TL) from these times. Each click lands on the spoken word that names it, the camera starts moving about 0.3 s before the thing it shows is mentioned, and each step pill appears as its step is introduced.
+- Cut between scenes only at idea boundaries (a new step, a new claim, a reveal), never mid-word, and finish each cut just before the next idea&#x27;s first spoken word.
+- Put the emphasis moves on stressed words. A counter lands at the exact moment its number is spoken.
+- Keep the player&#x27;s &quot;Load voiceover&quot; button working so I can drop in my audio and hear it in sync.
+
+STORYBOARD FIRST
+Before building, show me a storyboard and wait for my OK:
+- One HTML page (an artifact if you can) with a grid of 6 to 10 panels, one per beat. Draw each panel on a canvas with the reference&#x27;s own helpers, scene drawing and finishing pass, so the stills already look like the finished piece. No animation or sound yet.
+- Under each panel: the beat number, its start and end time, the exact on-screen words, the camera move or emphasis, how it gets there from the previous beat (the same scene continuing, or a cut and which kind), and its key sounds.
+- Below the grid, list any facts or numbers you had to assume.
+When I approve it (or after my changes), build the full animation and reuse the storyboard&#x27;s drawing code.
+
+WHAT TO BUILD
+One self-contained HTML file (an artifact if you can), built on the reference file below:
+- Keep the page, the player (play/pause, scrub, time, sound toggle, loop, Load voiceover) and the CM and SFX blocks unchanged.
+- Replace the demo&#x27;s story: TL, CAM, CURSOR, STEP_NAMES, the app pieces (sidebar, header, homePage, emptyState, modal, editor), the spotlight calls in explainer(), titleCard(), notification(), outroCard() and scoreSound(). Keep and reuse the style&#x27;s helpers (the ui-kit helpers (rr, track, rise, riseLine, typed, softCard, cursorArrow, checkMark, padBed), wallpaper(), appWindow() as the frame, spotlight(), cursor(), stepCallout() and the camera transform in explainer()).
+- Aim for 15 to 40 seconds unless my content needs more, and set the duration in TL.D.
+- Keep window.seek(t), window.DURATION, window.scoreSound and window.SFX exposed, so the video can be rendered frame by frame.
+- Load the style&#x27;s fonts before the first draw, as the reference does: DM Sans (400 to 700), DM Mono (400 and 500).
+
+THE STYLE
+- Surface: a desktop with a soft indigo to teal gradient wallpaper and two slow light blooms. On it, one app window (rounded, deep shadow) with a title bar, a sidebar and a main area. The whole UI is drawn in code, crisp and believable, for an invented app with an invented name. Never copy a real product’s UI, name or logo.
+- Type: DM Sans for all UI and titles (700 for headings and selected items, 400 to 500 for body), DM Mono in caps for tiny labels (WHEN, THEN, LIVE). Ink #14161c, muted #6a6f7c, one accent (#5b5bf6) for buttons, selection and the cursor ripple, green #1fb46e for live and success, yellow #ffd60a only for spotlight edges.
+- Cursor: a classic arrow that moves along eased waypoints (CURSOR keys), dips slightly on each click, and leaves an accent ripple. Every click has a visible result within 0.1 s: a pressed button, a selected row, an opened menu.
+- Camera: one continuous screen recording. Zoom in (1.2x to 1.6x) toward the area being used, hold, and ease back out to the full window between steps (CAM keys). The camera leads the cursor slightly.
+- Emphasis: a spotlight dims everything except a rounded cutout with a yellow edge around the one control that matters. Toasts, notifications and a side panel slide in to prove the result.
+- Chrome: a title card first (small mono tag, a big two-line title, a pill with the step count and time), a dark numbered step pill at the bottom left that swaps as each step starts, and a dark lower third with a green check at the end.
+- Flow: real UI behaviour in order: navigate, empty state, modal with choices, dropdown, continue, editor with connected nodes, typed fields, chips, a toggle that turns on, and the outcome happening (a new row, a message, a file).
+- Pace: 3 to 5 seconds per step, never more than one new action at a time, and a 1.5 second hold on the result.
+
+RULES THAT KEEP IT IN STYLE
+- Change the story, the words and the props; do not change the medium. Draw every subject accurately for my topic and double-check any facts and numbers you show.
+- Every frame is a pure function of t. Use CM.rng(seed) and CM.noise1(seed) for all randomness, never Math.random. Caching static layers is fine.
+- It will be watched on phones: at 1280x720 keep the title card at 90 px or more, step callouts at 28 px, app text at 18 px or more (the camera zooms in on anything smaller), and the lower third at 40 px. Fill the frame.
+- Keep each frame fast, well under 50 ms.
+- Give my topic its own demo content; do not reuse the reference&#x27;s story (&quot;Your first automation in an invented app called Flowdesk&quot;) unless my content asks for it.
+
+SOUND
+- Bed: a warm, slow pad (padBed) with soft hats while the steps run, no kick. It drops away under the title card for a moment.
+- Map events to the kit: every cursor click gets &quot;click&quot;; modals, menus, nodes and chips get &quot;pop&quot; (higher pitch for smaller things); typing gets &quot;keys&quot;; every camera zoom in or out gets a soft pink-noise swell; step pills get a two-note chime that climbs a little with each step; the toggle gets a short bright swish; a toast or the result gets a chime; an incoming notification gets &quot;ping&quot;; panels sliding in get a soft &quot;whoosh&quot;.
+- Voiceover mix: the player calls SFX.live with { voiceover: true } once narration is loaded, which keeps the pad low and plays anything marked soft at about 55%. Keep clicks at full level (they are the proof), mark camera whooshes and ticks soft: true, and keep chimes for the step pills and the final result only.
+- Sync is everything: the sound score reads the same TL times as the picture.
+
+IF YOU CAN RUN CODE
+Render an MP4: open the file in headless Chrome, call window.seek(i / 30) for every frame, capture the canvas and pipe the frames into ffmpeg. Render the effects with SFX.render(window.scoreSound, window.DURATION, 48000, { voiceover: false }), which returns interleaved stereo floats, and mux them in. With a voiceover, render the effects with { voiceover: true } and mix them under my audio file.
+
+STYLE CARD
+Name: Software Walkthrough
+Family: Screen and UI
+Look: A polished screen-recording tutorial built entirely in code: an app window on a soft gradient desktop, a real-feeling cursor with click ripples, a camera that zooms into what matters, yellow-edged spotlights, numbered step callouts and a calm pad underneath.
+How it explains: It shows the clicks, not just the idea: a title card, then the cursor moves through the real flow while the camera follows it in and out, modals and menus open, fields get typed, toggles flip, and a dark step pill at the bottom left counts you through. It ends on the result actually happening and a short lower third.
+
++ the style's full reference animation file (code), attached with the prompt.</pre>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECT 04 ================= -->
+<section class="wrap proj" id="p4">
+  <div class="phead">
+    <span class="big">04</span>
+    <div>
       <p class="label">Social · Self-initiated concepts</p>
       <h2>Two Instagram carousels, two very different products</h2>
       <p class="lede">A hair straightener launched like a dating-app match, and a power strip revealed feature by feature. The concepts are mine. Claude and ChatGPT helped me get from idea to finished slides faster.</p>
@@ -324,6 +574,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:var(--s3);flex-wrap:
     <li><strong>The idea stays mine</strong><span>AI sped up the making. The dating-app concept and every design call came from me.</span></li>
     <li><strong>A short brief can work</strong><span>When the visual style is already set, one clear line is enough (Project 01).</span></li>
     <li><strong>Detail isn't taste</strong><span>A detailed brief got the mechanics right, but only my review fixed the look (Project 02).</span></li>
+    <li><strong>Storyboard first</strong><span>Approving stills before animation saved full re-renders (Project 03).</span></li>
     <li><strong>Feedback must be specific</strong><span>"Fewer zooms, no emojis, landscape" is easy to act on. "Make it better" is not.</span></li>
   </ul>
 </section>
@@ -331,7 +582,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:var(--s3);flex-wrap:
 <footer>
   <div class="wrap">
     <span>Riya Bhargava · Brand and Visual Designer</span>
-    <span>Made with Claude and ChatGPT. Footage belongs to its original creators. Bombae and LUMO are self-initiated concepts.</span>
+    <span>Made with Claude, ChatGPT and ElevenLabs. Footage belongs to its original creators. Bombae and LUMO are self-initiated concepts.</span>
   </div>
 </footer>
 
